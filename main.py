@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Path, Query, HTTPException, Body
-from Routes import login, register, chat
+from Routes import login, register, chat_ws, connected_players
 from pydantic import BaseModel, Field
 import sqlite3
 import bcrypt
@@ -22,4 +22,8 @@ current_chat = ""
 # NOT your modules location!
 app.include_router(login.route)
 app.include_router(register.route)
-app.include_router(chat.route)
+app.include_router(chat_ws.route)
+
+
+# Websocket testing for players. Might update chat using websockets too
+app.include_router(connected_players.route)

@@ -6,13 +6,11 @@ cursor = connection.cursor()
 
 # 2. Create a table with two columns: an ID and a Message
 cursor.execute("""
-    CREATE TABLE IF NOT EXISTS userdata (
-        id INTEGER PRIMARY KEY,
-        username TEXT,
-        password TEXT
-    )
+        ALTER TABLE userdata ADD COLUMN last_seen INTEGER NOT NULL DEFAULT 0;
 """)
-
+cursor.execute("""
+        ALTER TABLE userdata ADD COLUMN session_id TEXT;
+""")
 connection.commit()
 connection.close()
 
