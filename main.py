@@ -22,6 +22,9 @@ current_chat = ""
 # NOT your modules location!
 app.include_router(login.route)
 app.include_router(register.route)
+
+
+# PS: I updated my chat to websocket lol
 app.include_router(chat_ws.route)
 
 
