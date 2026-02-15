@@ -58,9 +58,12 @@ This repository is designed to serve as a stable core framework that can be exte
 ---
 
 ## Project Structure
-Repo for godot
-- https://github.com/RobertTBrooks/fastapi-for-godot
 
+Repo for Godot and FastAPI backend:
+
+https://github.com/RobertTBrooks/fastapi-for-godot
+
+```
 res://
 ├── Scenes/
 │   ├── Enemies/
@@ -87,7 +90,9 @@ res://
 │   ├── http_get.gd
 │   └── http_post.gd
 └── icon.svg
+```
 
+```
 FASTAPI-FOR-GODOT/
 ├── __pycache__/
 ├── DataBases/
@@ -107,9 +112,8 @@ FASTAPI-FOR-GODOT/
 ├── venv/
 ├── main.py
 └── README.md
+```
 
-
----
 
 ## Installation
 
